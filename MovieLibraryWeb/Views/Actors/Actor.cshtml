@@ -1,0 +1,12 @@
+﻿@model Actor
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@Model.Name</h1>
+<h1>@Model.Movies.Count</h1>
+@foreach(var item in Model.Movies)
+{
+    <p>@item.Name</p>
+}
+

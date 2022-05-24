@@ -1,0 +1,27 @@
+﻿@model Actor
+<form method="post">
+    <div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Lastname"></label>
+            <input asp-for="Lastname" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="BirthDate"></label>
+            <input asp-for="BirthDate" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Rating"></label>
+            <input asp-for="Rating" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Portrait"></label>
+            <input asp-for="Portrait" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a asp-controller="Actors" asp-action="Index" class="btn btn-secondary" style="width:150px">Reload</a>
+    </div>
+</form>
