@@ -49,6 +49,42 @@
 <h1> Actors </h1>
 <hr />
 <br />
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="card">
+        <div class="card-header">
+            <h3>გაფილტვრა</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <label class="col-form-label">სახელი:</label>
+                <input class="form-control" id="name" />
+            </div>
+            <div class="row">
+                <label class="">გვარი:</label>
+                <input class="form-control" id="lastname" />
+            </div>
+            <div class="row">
+                <label class="col-form-label">წლიდან: <span id="spanyearfrom"></span></label>
+                <input class="form-control" type="range" min="1800" max="2022" value="1800" id="yearfrom" />
+            </div>
+            <div class="row">
+                <label class="col-form-label">წლამდე: <span id="spanyearto"></span></label>
+                <input class="form-control" type="range" min="1800" max="2022" value="2022" id="yearto" />
+            </div>
+            <div class="row">
+                <label class="col-form-label">რეიტინგი(დან): <span id="spanratingfrom"></span></label>
+                <input class="form-control" type="range" min="0" max="10" value="0" id="ratingfrom" />
+            </div>
+            <div class="row">
+                <label class="col-form-label">რეიტინგი(მდე): <span id="spanratingto"></span></label>
+                <input class="form-control" type="range" min="0" max="10" value="10" id="ratingto" />
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="button" id="btnsubmit" class="btn btn-info" style="float:right;">ძებნა</button>
+        </div>
+    </div>
+</div>
 @for (int i = 0; i < Model.Count(); i += 4)
 {
     <div class="row">
@@ -56,11 +92,13 @@
         {
             <div class="column">
                 <div class="card">
-                    <img class="" src="@Model.ElementAt(i).Portrait"/>
+                    <img class="" src="@Model.ElementAt(i).Portrait" />
                     <hr />
                     <h5 style="margin-left: 10px">@Model.ElementAt(i).Name @Model.ElementAt(i).Lastname</h5>
                     <p style="margin-left: 10px">Rating: @Model.ElementAt(i).Rating</p>
                     <a style="margin-left: 10px" href="/Actors/Actor/@Model.ElementAt(i).Id" target="_blank">See more</a>
+                    <a style="margin-left: 10px" href="/Actors/Edit/@Model.ElementAt(i).Id">Edit</a>
+                    <a style="margin-left: 10px" href="/Actors/Delete/@Model.ElementAt(i).Id">Delete</a>
                 </div>
             </div>
         }
@@ -73,6 +111,8 @@
                     <h5 style="margin-left: 10px">@Model.ElementAt(i + 1).Name @Model.ElementAt(i + 1).Lastname</h5>
                     <p style="margin-left: 10px">Rating: @Model.ElementAt(i + 1).Rating</p>
                     <a style="margin-left: 10px" href="/Actors/Actor/@Model.ElementAt(i+1).Id" target="_blank">See more</a>
+                    <a style="margin-left: 10px" href="/Actors/Edit/@Model.ElementAt(i+1).Id">Edit</a>
+                    <a style="margin-left: 10px" href="/Actors/Delete/@Model.ElementAt(i+1).Id">Delete</a>
                 </div>
             </div>
         }
@@ -85,6 +125,8 @@
                     <h5 style="margin-left: 10px">@Model.ElementAt(i + 2).Name @Model.ElementAt(i + 2).Lastname</h5>
                     <p style="margin-left: 10px">Rating: @Model.ElementAt(i + 2).Rating</p>
                     <a style="margin-left: 10px" href="/Actors/Actor/@Model.ElementAt(i+2).Id" target="_blank">See more</a>
+                    <a style="margin-left: 10px" href="/Actors/Edit/@Model.ElementAt(i+2).Id">Edit</a>
+                    <a style="margin-left: 10px" href="/Actors/Delete/@Model.ElementAt(i+2).Id">Delete</a>
                 </div>
             </div>
         }
@@ -97,6 +139,8 @@
                     <h5 style="margin-left: 10px">@Model.ElementAt(i + 3).Name @Model.ElementAt(i + 3).Lastname</h5>
                     <p style="margin-left: 10px">Rating: @Model.ElementAt(i + 3).Rating</p>
                     <a style="margin-left: 10px" href="/Actors/Actor/@Model.ElementAt(i+3).Id" target="_blank">See more</a>
+                    <a style="margin-left: 10px" href="/Actors/Edit/@Model.ElementAt(i+3).Id">Edit</a>
+                    <a style="margin-left: 10px" href="/Actors/Delete/@Model.ElementAt(i+3).Id">Delete</a>
                 </div>
             </div>
         }

@@ -1,5 +1,5 @@
 ﻿@model Actor
-<form method="post" asp-action="Add">
+<form method="post" asp-action="Edit">
     <div>
         <div class="mb-3">
             <label asp-for="Name"></label>
@@ -21,7 +21,7 @@
             <label asp-for="Portrait"></label>
             <input asp-for="Portrait" class="form-control" />
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
         <a asp-controller="Actors" asp-action="Index" class="btn btn-secondary" style="width:150px">Back</a>
     </div>
 </form>
