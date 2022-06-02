@@ -71,23 +71,9 @@ namespace MovieLibraryWeb.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-                return NotFound();
-            Actor actor = this._db.Actors.Where(a => a.Id == id).FirstOrDefault();
-            if (actor == null)
-                return NotFound();
-
-            return View(actor);
-        }
-
-        [HttpPost]
-        public IActionResult DeletePOST(int? id)
+        public IActionResult Delete(int id)
         {
             Actor actor = this._db.Actors.Find(id);
-            if (actor == null)
-                return NotFound();
             this._db.Actors.Remove(actor);
             this._db.SaveChanges();
             return RedirectToAction("Index");

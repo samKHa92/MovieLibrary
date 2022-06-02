@@ -148,4 +148,3 @@ C:\Users\samkh\source\repos\MovieLibrary\MovieLibraryWeb\obj\Debug\net5.0\Razor\
 C:\Users\samkh\source\repos\MovieLibrary\MovieLibraryWeb\obj\Debug\net5.0\Razor\Views\Actors\Index.cshtml.g.cs
 C:\Users\samkh\source\repos\MovieLibrary\MovieLibraryWeb\obj\Debug\net5.0\Razor\Views\Actors\Add.cshtml.g.cs
 C:\Users\samkh\source\repos\MovieLibrary\MovieLibraryWeb\obj\Debug\net5.0\Razor\Views\Actors\Edit.cshtml.g.cs
-C:\Users\samkh\source\repos\MovieLibrary\MovieLibraryWeb\obj\Debug\net5.0\Razor\Views\Actors\Delete.cshtml.g.cs
